@@ -13,7 +13,7 @@ It collects AI news from free public sources, filters by keyword, and emails a s
 ## How it works
 1. `digest.py` queries each source for items from the last 30 hours (GitHub: last 7 days).
 2. It renders an HTML email and sends it with `smtplib` to `DIGEST_TO`. A failing source is logged and skipped, never fatal.
-3. `.github/workflows/daily.yml` triggers it daily (cron `0 4 * * *` UTC) and on manual dispatch.
+3. `.github/workflows/daily.yml` triggers it daily (cron `17 4 * * *` UTC) and on manual dispatch.
 
 ## Preview locally
     python3 -m venv .venv && .venv/bin/pip install -r requirements.txt

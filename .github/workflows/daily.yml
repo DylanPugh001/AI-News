@@ -2,7 +2,9 @@ name: Daily AI digest
 
 on:
   schedule:
-    - cron: "0 4 * * *"   # 04:00 UTC = 06:00 South Africa time
+    # 04:17 UTC = 06:17 South Africa time. Not on the hour on purpose: GitHub
+    # drops or delays scheduled runs at :00 when its queue is overloaded.
+    - cron: "17 4 * * *"
   workflow_dispatch: {}    # lets you press "Run workflow" to test
 
 jobs:
